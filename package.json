@@ -27,7 +27,7 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint:fix": "npm run lint -- --fix",
     "lint:md": "markdownlint-cli2 \"**/*.{md,mdx}\" \"!.github\" \"!.changeset\" \"!**/node_modules/**\" \"!**/CHANGELOG.md\"",
-    "test": "vitest",
+    "test": "vite test",
     "test:type-check": "tsc --noEmit",
     "test:update": "npm run test -- -u",
     "type-check": "tsc --noEmit && turbo type-check",
@@ -89,7 +89,8 @@
     "turbo": "^2.5.5",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.40.0",
-    "vitest": "^4.0.3"
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest",
+    "@voidzero-dev/vite-plus": "latest"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.53.3"
@@ -107,5 +108,9 @@
       "running": false
     }
   ],
-  "packageManager": "npm@11.6.3+sha512.4085a763162e0e3acd19a4e9d23ad3aa0978e501ccf947dd7233c12a689ae0bb0190763c4ef12366990056b34eec438903ffed38fde4fbd722a17c2a7407ee92"
+  "packageManager": "npm@11.6.3+sha512.4085a763162e0e3acd19a4e9d23ad3aa0978e501ccf947dd7233c12a689ae0bb0190763c4ef12366990056b34eec438903ffed38fde4fbd722a17c2a7407ee92",
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+  }
 }

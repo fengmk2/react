@@ -24,8 +24,8 @@
     "build": "rollup -c",
     "type-check": "tsc --noEmit",
     "watch": "rollup -c -w",
-    "test": "vitest --run",
-    "test:watch": "vitest"
+    "test": "vite test --run",
+    "test:watch": "vite test"
   },
   "dependencies": {
     "@babel/runtime": "^7.28.2",
